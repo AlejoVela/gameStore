@@ -7,7 +7,7 @@ const saleSchema = mongoose.Schema({
     userEmail: String,
     productInfo: [{code:String, amount:Number}],
     price: Number,
-    code: {type: String, default: uuidv4()},
+    code: {type: String, default: uuidv4()},//no esta generando codigos distintos, se debe revisar
     date: { type: Date, default: Date.now() },
 });
 
