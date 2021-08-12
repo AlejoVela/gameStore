@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const stockSchema = mongoose.Schema({
-    productCode: Number,
+    productCode: String,
     amount: Number,
     stockRoom: String,
-    date: { type: Date, default: Date.now() },
     productId: { type: mongoose.Schema.ObjectId, ref: "product" },
+    date: { type: Date, default: Date.now() },
 });
 
 const stock = mongoose.model( "stock", stockSchema );
